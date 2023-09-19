@@ -56,11 +56,13 @@ const nearbySort = async (
   return await new Promise((resolve, reject) => {
     try {
       validateArgs(lat, long, arr, asc);
-      const sortedArray = arr.sort((a, b) => {
-        const distanceA = getDistance(lat, long, a.lat, a.long);
-        const distanceB = getDistance(lat, long, b.lat, b.long);
-        return asc ? distanceA - distanceB : distanceB - distanceA;
-      });
+      const sortedArray = arr
+        .map((el) => {
+          return { ...el, d: getDistance(lat, long, el.lat, el.long) };
+        })
+        .sort((a, b) => {
+          return asc ? a.d - b.d : a.d - b.d;
+        });
       resolve(sortedArray);
     } catch (err) {
       reject(err);
