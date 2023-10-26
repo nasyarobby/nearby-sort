@@ -1,6 +1,6 @@
 {
-  "name": "nearby-sort",
-  "version": "1.1.1",
+  "name": "@ditjenpajakri/nearby-sort-map",
+  "version": "1.0.0",
   "description": "The library to sort array of objects by distance from a given point",
   "type": "module",
   "source": "src/index.ts",
@@ -21,21 +21,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yousufkalim/nearby-sort.git"
+    "url": "git+https://github.com/nasyarobby/nearby-sort.git"
   },
-  "keywords": [
-    "nearby",
-    "sort",
-    "geo",
-    "distance",
-    "finder"
-  ],
-  "author": "Yousuf Kalim <yousufkalim@outlook.com>",
+  "keywords": [],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yousufkalim/nearby-sort/issues"
-  },
-  "homepage": "https://github.com/yousufkalim/nearby-sort#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@types/jest": "^29.2.5",
